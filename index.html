@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hex Color</title>
+</head>
+
+<body>
+    <div>
+        <div class="colorText">
+            <span>HEX COLOR :</span>
+            <span id="hexColor">#230070</span>
+        </div>
+            <button>Change HEX Color</button>
+    </div>
+    <script>
+        let color = ["#FAA761", "#773322", "#5AACE8", "#FED764", "#009321", "#E28693", "#884C9A", "#FF0000", "#008080"]
+        let i = 0;
+        let a = color.length;
+        document.querySelector("button").addEventListener('click',
+            function () {
+                if (i < a) {
+                    document.querySelector("body").style.backgroundColor= color[i];
+                    document.getElementById('hexColor').innerHTML=color[i];
+                   i=i+1; 
+                }
+                else {
+                    i = 0;
+                }
+            })
+    </script>
+</body>
+
+</html>
